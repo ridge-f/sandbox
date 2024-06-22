@@ -1,3 +1,10 @@
 from django.contrib import admin
+from .models import Question, Option
 
-# Register your models here.
+class OptionInline(admin.TabularInline):
+    model = Option
+
+class QuestionAdmin(admin.ModelAdmin):
+    inlines = [OptionInline]
+
+admin.site.register(Question, QuestionAdmin)

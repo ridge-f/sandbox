@@ -37,7 +37,7 @@ ROOT_URLCONF = 'question_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'question_app', 'questions', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
